@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+</head>
+<body>
+
+    <% if (movie && Array.isArray(movie) && movie.length > 0) { %>
+
+        <% movie.forEach(function(mov) { %>
+            <div>
+                <h2>movie Name:</h2>
+                <p><%= mov.movie Name %></p>
+
+                <h2>genre:</h2>
+                <p><%= mov.genre %></p>
+            </div>
+            <hr>
+        <% }) %>
+
+    <% } else { %>
+        <h2>No movie found </h2>
+    <% } %>
+
+    <a href="/movie/new">Add new movie</a>
+    <a href="/movie/edit">edit movie</a>
+    <a href="/movie/delete">Delete movie</a>
+</body>
+</html>
